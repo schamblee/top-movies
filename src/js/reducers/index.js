@@ -1,21 +1,33 @@
 
-import { ADD_MOVIE, LOAD_DATA } from "../constants/action-types";
+import {
+  ADD_MOVIE_TO_FAVORITES,
+  LOAD_DATA,
+  SET_SORT_PARAMS
+} from "../constants/action-types";
 
 const initialState = {
   movies: [],
-  remoteMovies: []
+  sortParams: [],
+  favoriteMovies: []
 };
 
 function rootReducer(state = initialState, action) {
-  if (action.type === ADD_MOVIE) {
+  if (action.type === ADD_MOVIE_TO_FAVORITES) {
+    // TODO: Implement favorites table
     return Object.assign({}, state, {
-      movies: state.movies.concat(action.payload)
+      favoriteMovies: state.favoriteMovies.concat(action.payload)
     });
   }
 
   if (action.type === LOAD_DATA) {
     return Object.assign({}, state, {
-      remoteMovies: state.remoteMovies.concat(action.payload)
+      movies: state.movies.concat(action.payload)
+    });
+  }
+
+  if (action.type === SET_SORT_PARAMS) {
+    return Object.assign({}, state, {
+      sortParams: state.sortParams.concat(action.payload)
     });
   }
 

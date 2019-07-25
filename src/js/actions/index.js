@@ -1,7 +1,11 @@
-import { ADD_MOVIE, LOAD_DATA } from "../constants/action-types";
+import {
+  ADD_MOVIE_TO_FAVORITES,
+  LOAD_DATA,
+  SET_SORT_PARAMS
+} from "../constants/action-types";
 
 export function addMovie(payload) {
-  return { type: ADD_MOVIE, payload };
+  return { type: ADD_MOVIE_TO_FAVORITES, payload };
 };
 
 export function getMovies() {
@@ -10,6 +14,23 @@ export function getMovies() {
       .then(response => response.json())
       .then(json => {
         dispatch({ type: LOAD_DATA, payload: json.results });
-      });
-    };
-  }
+    });
+  };
+}
+
+export function setSortParams(sortKey) {
+  return (dispatch, getState) => {
+    const { sortParams } = getState();
+    const order = sortParams.length && sortParams.slice(-1)[0].data.order
+
+    dispatch({
+      type: SET_SORT_PARAMS,
+      payload: {
+        data: {
+          key: sortKey,
+          order: order === "desc" ? "asc" : "desc"
+        }
+      }
+    });
+  };
+};

@@ -1,2 +1,3 @@
-export const ADD_MOVIE = "ADD_MOVIE";
+export const ADD_MOVIE_TO_FAVORITES = "AADD_MOVIE_TO_FAVORITES";
 export const LOAD_DATA = "LOAD_DATA";
+export const SET_SORT_PARAMS = "SET_SORT_PARAMS"
