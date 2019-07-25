@@ -2,6 +2,12 @@
 
 - [Live Demo](https://peaceful-bose-4526a0.netlify.com/)
 
+## Run Locally
+- `git clone https://github.com/schamblee/top-movies.git`
+- `cd top-movie`
+- `npm install`
+- `npm start`
+
 ## Screenshots
 
 Dashboard:
@@ -14,6 +20,7 @@ Dashboard:
 * React
 * Redux
 * Netlify
+* [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ## Features
 
