@@ -28,6 +28,6 @@ main {
   padding: 50px;
 }
 
-th {
+.Sortable {
   cursor: pointer;
 }

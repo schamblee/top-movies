@@ -17,12 +17,12 @@ export class MovieTable extends Component {
         <table className="Table">
           <thead>
             <tr>
-              <th className="Cell Cell-header" onClick={() => setSortParams("title")}>Title</th>
-              <th className="Cell Cell-header" onClick={() => setSortParams("vote_count")}>Vote Count</th>
-              <th className="Cell Cell-header" onClick={() => setSortParams("vote_average")}>Average Vote</th>
-              <th className="Cell Cell-header" onClick={() => setSortParams("popularity")}>Popularity</th>
+              <th className="Cell Cell-header Sortable" onClick={() => setSortParams("title")}>Title</th>
+              <th className="Cell Cell-header Sortable" onClick={() => setSortParams("vote_count")}>Vote Count</th>
+              <th className="Cell Cell-header Sortable" onClick={() => setSortParams("vote_average")}>Average Vote</th>
+              <th className="Cell Cell-header Sortable" onClick={() => setSortParams("popularity")}>Popularity</th>
               <th className="Cell Cell-header">Poster</th>
-              <th className="Cell Cell-header" onClick={() => setSortParams("overview")}>Overview</th>
+              <th className="Cell Cell-header Sortable" onClick={() => setSortParams("overview")}>Overview</th>
             </tr>
           </thead>
           <tbody>
