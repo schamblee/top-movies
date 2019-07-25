@@ -6,11 +6,8 @@
 
 Dashboard:
 
-![Sortable Top-rated Movie Table](/public/screenshot)
+![Sortable Top-rated Movie Table](/public/screenshot.png)
 
-Add New Employee:
-
-![Add New Employee](https://image.ibb.co/f8Eano/Screen_Shot_2018_06_10_at_5_52_38_AM.png)
 
 ## Built With
 
