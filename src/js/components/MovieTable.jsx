@@ -27,7 +27,9 @@ export class MovieTable extends Component {
               <td className="Cell">{el.vote_count}</td>
               <td className="Cell">{el.average_vote}</td>
               <td className="Cell">{el.popularity}</td>
-              <td className="Cell">{el.poster}</td>
+              <td className="Cell">
+                <img src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2/${el.poster_path}`}/>
+              </td>
               <td className="Cell">{el.overview}</td>
             </tr>
           ))}
