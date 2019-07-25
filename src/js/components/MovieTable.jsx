@@ -13,7 +13,7 @@ export class MovieTable extends Component {
 
   render() {
     return (
-      <div className="ScrollContainer">
+      <div className="TableContainer">
         <table className="Table">
           <th className="Cell Cell-header">Title</th>
           <th className="Cell Cell-header">Vote Count</th>
@@ -28,7 +28,8 @@ export class MovieTable extends Component {
               <td className="Cell">{el.average_vote}</td>
               <td className="Cell">{el.popularity}</td>
               <td className="Cell">
-                <img src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2/${el.poster_path}`}/>
+                <img src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2/${el.poster_path}`}
+                  alt={el.title}/>
               </td>
               <td className="Cell">{el.overview}</td>
             </tr>
